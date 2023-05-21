@@ -2,6 +2,16 @@
 #include <stdlib.h>
 #include <string.h>
 
+#include "./util.h"
+
+int main()
+{
+    char* s = "Beethoven";
+    s = reverse(s);
+    printf("%s\n",s);
+    return 0;
+}
+
 char* reverse(char* string)
 {
     int length = strlen(string);
@@ -12,12 +22,4 @@ char* reverse(char* string)
     }
     result[length] = '\0';
     return result;
-}
-
-int main()
-{
-    char* s = "Beethoven";
-    s = reverse(s);
-    printf("%s\n",s);
-    return 0;
 }
