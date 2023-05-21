@@ -3,11 +3,8 @@ CFLAGS = -Wall -Wextra -g
 
 all: main
 
-main: main.o
-	$(CC) $(CFLAGS) main.o -o main
-
-main.o: main.c
-	$(CC) $(CFLAGS) -c main.c
+main: main.c util.h
+	$(CC) $(CFLAGS) main.c -o main
 
 clean:
-	rm -f main.exe main
+	rm -f main
